@@ -52,6 +52,7 @@ public class PlayerController : MonoBehaviour
         isFacingRight = !isFacingRight;
         transform.localScale = new(
             x: transform.localScale.x * -1,
-            y: transform.localScale.y);
+            y: transform.localScale.y,
+            z: transform.localScale.z);
     }
 }
