@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
             animator.SetBool("isGrounded", false);
             rigidbody2d.AddForce(new Vector2(x:0, y:jumpHeight));
+            rigidbody2d.AddForce(new(x:0, y:jumpHeight));
         }
     }
 
