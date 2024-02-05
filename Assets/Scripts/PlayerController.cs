@@ -4,11 +4,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float maxSpeed = 7f;
     [SerializeField] private float jumpHeight = 150f;
-<<<<<<< HEAD
     [SerializeField] private float fireRate = 0.5f;
-=======
-    [SerializeField] private float fireRate = .5f;
->>>>>>> b512a37e5f6adc94afaf824e093fda796fb06d1b
 
     [SerializeField] private Transform groundChecker;
     [SerializeField] private LayerMask groundLayer;
@@ -21,10 +17,6 @@ public class PlayerController : MonoBehaviour
     private bool isFacingRight;
     private bool isGrounded;
     private float nextFire;
-<<<<<<< HEAD
-
-=======
->>>>>>> b512a37e5f6adc94afaf824e093fda796fb06d1b
 
     private void Start()
     {
@@ -48,12 +40,9 @@ public class PlayerController : MonoBehaviour
         if (Time.time >= nextFire && Input.GetAxisRaw("Fire1") != 0)
         {
             nextFire = Time.time + fireRate;
-<<<<<<< HEAD
             Instantiate(projectile, gunMuzzle.position, Quaternion.Euler(x: 0, y: 0,z: isFacingRight ? 0 : 180));
-=======
             Instantiate(projectile, gunMuzzle.position, 
                 Quaternion.Euler(x: 0, y: 0, z: isFacingRight ? 0 : 180));
->>>>>>> b512a37e5f6adc94afaf824e093fda796fb06d1b
         }
     }
 
