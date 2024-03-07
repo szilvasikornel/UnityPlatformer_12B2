@@ -1844,6 +1844,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: spikeyRock
       objectReference: {fileID: 0}
+    - target: {fileID: 5868673020036719986, guid: 0d48d3b718837a74b9cb26aa4e61d70a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

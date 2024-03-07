@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6887314193421041860}
   - component: {fileID: 8524560055079720716}
   m_Layer: 0
-  m_Name: projectileExplosionPS
+  m_Name: projectileExplosionFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
