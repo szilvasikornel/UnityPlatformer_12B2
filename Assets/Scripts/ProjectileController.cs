@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ProjectileController : MonoBehaviour
@@ -17,7 +19,10 @@ public class ProjectileController : MonoBehaviour
 
     public void Stop()
     {
+<<<<<<< HEAD
         audioSource.mute = true;
+=======
+>>>>>>> 8baaeebb60a4f8d70389a5883b84c013acc11a5d
         rigidbody2d.velocity = new(0, 0);
     }
 }

@@ -4,7 +4,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float maxSpeed = 7f;
     [SerializeField] private float jumpHeight = 150f;
-    [SerializeField] private float fireRate = .5f;
+    [SerializeField] private float fireRate = 0.5f;
 
     [SerializeField] private Transform groundChecker;
     [SerializeField] private LayerMask groundLayer;
@@ -33,12 +33,14 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = false;
             animator.SetBool("isGrounded", false);
+            rigidbody2d.AddForce(new Vector2(x:0, y:jumpHeight));
             rigidbody2d.AddForce(new(x:0, y:jumpHeight));
         }
 
         if (Time.time >= nextFire && Input.GetAxisRaw("Fire1") != 0)
         {
             nextFire = Time.time + fireRate;
+            Instantiate(projectile, gunMuzzle.position, Quaternion.Euler(x: 0, y: 0,z: isFacingRight ? 0 : 180));
             Instantiate(projectile, gunMuzzle.position, 
                 Quaternion.Euler(x: 0, y: 0, z: isFacingRight ? 0 : 180));
         }
