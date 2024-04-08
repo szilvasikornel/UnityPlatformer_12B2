@@ -19,7 +19,7 @@ public class asdad : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Destroyable"))
         {
             projectileController.Stop();
-            Instantiate(explosionEffect, transform.position,transform.rotation);
+            Instantiate(explosionEffect, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }
